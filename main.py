@@ -63,8 +63,8 @@ async def reaction(data: Data):
         try:
             await ws.send_text(data.text)
 
-        except:
-            websockets.remove(ws)
+        except Exception as e:
+            print(e)
             print('No websocket')
 
 
@@ -76,6 +76,6 @@ async def emoji(data: Data):
         try:
             await ws.send_text(data.text)
 
-        except:
-            websockets2.remove(ws)
+        except Exception as e:
+            print(e)
             print('No websocket')
